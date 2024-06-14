@@ -24,6 +24,9 @@ class BoatController extends AbstractController
         $boat->setCoordY($y);
 
         $entityManager->flush();
+
+        $this->addFlash('success', 'Le black Pearl est bien arrivé à destination avec Jack !');
+
         
         return $this->redirectToRoute('map');
     }
