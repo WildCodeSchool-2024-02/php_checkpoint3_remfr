@@ -62,6 +62,12 @@
 						Navigation
 					</h2>
 					{# Add here N/S/E/W buttons #}
+					<ul>
+						<li><input type="button" value="Move to N" href="{{ path('moveDirection', {direction: 'N'}) }}"></li>
+						<li><input type="button" value="Move to S" href="{{ path('moveDirection', {direction: 'S'}) }}"></li>
+						<li><input type="button" value="Move to E" href="{{ path('moveDirection', {direction: 'E'}) }}"></li>
+						<li><input type="button" value="Move to W" href="{{ path('moveDirection', {direction: 'W'}) }}"></li>
+					</ul>
 				</div>
 			</div>
 		</div>
