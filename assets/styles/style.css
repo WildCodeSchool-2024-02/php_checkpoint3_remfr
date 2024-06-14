@@ -25,6 +25,8 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     padding-top: var(--navbar-size);
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
 }
 
 nav {
@@ -45,6 +47,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-size: var(--text-size);
     height: var(--container-size);
     overflow: auto;
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
 }
 
 .introduction p::first-letter {
@@ -101,5 +105,11 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 blockquote {
     font-style: italic;
     margin-top:0.5em;
+}
+
+.chatgpt {
+    color: rgb(7, 7, 7);
+    display: flex;
+    justify-content: center;
 }
 
