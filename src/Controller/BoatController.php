@@ -14,8 +14,7 @@ class BoatController extends AbstractController
     #[Route('/move/{x<\d+>}/{y<\d+>}', name: 'moveBoat', requirements: ['x'=>'\d+','y'=>'\d+'])]
     public function moveBoat(int $x,int $y,BoatRepository $boatRepository,EntityManagerInterface $entityManager): Response
     {
-        $boat = $boatRepository->findOneBy([$x,$y]);
-        
+        $boat = $boatRepository->findOneBy([]);
         $boat->setCoordX($x);
         $boat->setCoordY($y);
 
@@ -45,6 +44,7 @@ class BoatController extends AbstractController
                 $boat->setCoordX($x + 1);
                 break;
         }
+        $entityManager->flush();
         return $this->redirectToRoute('map');
     }
 }
