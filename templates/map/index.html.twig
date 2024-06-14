@@ -54,14 +54,21 @@
 					<h2>
 						Information
 					</h2>
-					{# Add here informations about current ship position #}
+					<ul>
+						<li style="color:white">Y Axis:{{ boat.coordY }}</li>
+						<li style="color:white">X Axis:{{ boat.coordX }}</li>
+						<li style="color:white">Tile Type: {{ tile.type }}</li>
+					
 				</div>
 				<div
 					class="navigation">
 					<h2>
 						Navigation
 					</h2>
-					{# Add here N/S/E/W buttons #}
+					<a href="{{ path('moveDirection', { 'direction': 'N' }) }}">Move North</a>
+					<a href="{{ path('moveDirection', { 'direction': 'E' }) }}">Move East</a>
+					<a href="{{ path('moveDirection', { 'direction': 'S' }) }}">Move South</a>
+					<a href="{{ path('moveDirection', { 'direction': 'W' }) }}">Move West</a>
 				</div>
 			</div>
 		</div>
