@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Repository\BoatRepository;
+use App\Repository\TileRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -67,7 +68,7 @@ class BoatController extends AbstractController
         }
 
         if (!$this->mapManager->tileExists($newX, $newY)) {
-            $this->addFlash('danger', 'Jack va sortir de la map !');
+            $this->addFlash('danger', 'Jack ne doit pas sortir de la map !');
         } else {
 
         $boat->setCoordX($newX);
