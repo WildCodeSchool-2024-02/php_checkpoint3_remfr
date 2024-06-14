@@ -57,7 +57,9 @@
 					{# Add here informations about current ship position #}
 					<p class="info-line">Boat's coordinates : ({{ boat.coordX }}, {{ boat.coordY }})</p>
 					<p class="info-line">The pearl is on a {{ position.type }} tile !</p>
-
+					{% if boat.coordX == 0 and boat.coordY == 0 %}
+						<p class="info-line">The treasure hunt is on !</p>
+					{% endif %}
 				</div>
 				<div
 					class="navigation">
