@@ -80,6 +80,24 @@
     padding-top: 0.2em;
 }
 
+.move-btns {
+    display: flex;
+    flex-direction: column;
+    height: 100%
+}
+
+.move-btns a {
+    font-family: var(--main-font);
+    font-size: larger;
+    color: black;
+    padding: 0;
+    text-align: center;
+    margin-top: 20%;
+    background-color: sandybrown;
+    background-image: none;
+    border-radius: 16px;
+}
+
 .infos {
     background-image: url('../images/map.jpg');
     width: 100%;

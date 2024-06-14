@@ -55,6 +55,9 @@
 						Information
 					</h2>
 					{# Add here informations about current ship position #}
+					<p>Boat's coordinates : ({{ boat.coordX }}, {{ boat.coordY }})</p>
+					<p>The pearl is on a {{ position.type }} tile !</p>
+
 				</div>
 				<div
 					class="navigation">
@@ -62,6 +65,13 @@
 						Navigation
 					</h2>
 					{# Add here N/S/E/W buttons #}
+					<div class="move-btns">
+						<a class="navigation" href="{{ path('direction', {'direction': 'N'}) }}">Go North (Up)</a>
+						<a class="navigation" href="{{ path('direction', {'direction': 'S'}) }}">Go South (Down)</a>
+						<a class="navigation" href="{{ path('direction', {'direction': 'E'}) }}">Go East (Right)</a>
+						<a class="navigation" href="{{ path('direction', {'direction': 'W'}) }}">Go West (Left)</a>
+					</div>
+
 				</div>
 			</div>
 		</div>
